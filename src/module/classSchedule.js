@@ -20,9 +20,9 @@ class Schedule {
     row.style.display = 'flex';
     row.style.justifyContent = 'space-between';
 
-    if (task.completed == true) {
+    if (task.completed === true) {
       completion = 'checked';
-      decoration = 'line-through'
+      decoration = 'line-through';
     }
 
     row.innerHTML = `
