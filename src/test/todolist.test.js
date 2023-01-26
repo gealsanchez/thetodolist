@@ -16,6 +16,7 @@ describe('Test methods', () => {
     const tasks = Storage.getTasks();
     expect(tasks[0].description).toBe('driving');
   });
+  
   test('delete task from the list', () => {
     Storage.removeTask(1);
     const tasks = Storage.getTasks();
