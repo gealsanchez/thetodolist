@@ -8,6 +8,14 @@ describe('Test methods', () => {
     const tasks = Storage.getTasks();
     expect(tasks.length).toBe(1);
   });
+  test('edit task from the list', () => {
+    document.body.innerHTML =
+      '<div class="task-list"<>' +
+      '</div>';
+    Storage.editTask(1, 'driving');
+    const tasks = Storage.getTasks();
+    expect(tasks[0].description).toBe('driving');
+  });
   test('delete task from the list', () => {
     Storage.removeTask(1);
     const tasks = Storage.getTasks();
