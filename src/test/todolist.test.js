@@ -8,4 +8,10 @@ describe('Test methods', () => {
     const tasks = Storage.getTasks();
     expect(tasks.length).toBe(1);
   });
+  
+  test('delete task from the list', () => {
+    Storage.removeTask(1);
+    const tasks = Storage.getTasks();
+    expect(tasks.length).toBe(0);
+  });
 });
